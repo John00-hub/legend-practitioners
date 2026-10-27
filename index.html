@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legend Practitioners | Solicitors, Advocates &amp; Notaries Public — Lekki Phase 1, Lagos</title>
+<meta name="description" content="Legend Practitioners is a premier commercial, oil & gas, maritime, dispute resolution, and Notary Public law firm at 25B Awkuzu Street, Lekki Phase 1, Lagos.">
+<style>
+  :root {
+    --charcoal: #0B0D10;
+    --onyx: #13171D;
+    --slate-dark: #1B222C;
+    --alabaster: #FAF9F6;
+    --stone: #F1EFEA;
+    --bronze: #B68D4C;
+    --bronze-light: #D7B477;
+    --ink: #11151C;
+    --body: #464E59;
+    --muted: #6E7785;
+    --line: rgba(17, 21, 28, 0.11);
+    --line-inv: rgba(250, 249, 246, 0.13);
+    --serif: 'Georgia', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--alabaster);
+    color: var(--ink);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .bar {
+    background: var(--charcoal);
+    color: rgba(250,249,246,0.8);
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    padding: 9px 24px;
+    border-bottom: 1px solid var(--line-inv);
+  }
+  .bar-in {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .bar a { color: var(--bronze-light); text-decoration: none; font-weight: 600; }
+  .dot { color: var(--bronze); margin: 0 8px; }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 95;
+    background: rgba(250, 249, 246, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .badge {
+    width: 44px;
+    height: 44px;
+    background: var(--charcoal);
+    border: 1.5px solid var(--bronze);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bronze-light);
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .logo-txt strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.15;
+  }
+  .logo-txt small {
+    display: block;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .links a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .links a:hover { color: var(--bronze); }
+  .cta-top {
+    background: var(--charcoal);
+    color: var(--alabaster);
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .cta-top:hover { background: var(--bronze); color: var(--charcoal); }
+
+  /* Hero */
+  .hero {
+    background: radial-gradient(circle at 82% 22%, rgba(182,141,76,0.18), transparent 45%),
+                linear-gradient(160deg, var(--charcoal) 0%, var(--onyx) 55%, var(--slate-dark) 100%);
+    color: var(--alabaster);
+    padding: 90px 24px 82px;
+  }
+  .hero-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 54px;
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--bronze-light);
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--bronze-light); }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .hero h1 em { font-style: italic; color: var(--bronze-light); }
+  .hero-p {
+    font-size: 17px;
+    color: rgba(250,249,246,0.82);
+    max-width: 590px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+  .btns { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px; }
+  .btn-bronze {
+    background: linear-gradient(135deg, var(--bronze-light), var(--bronze));
+    color: var(--charcoal);
+    text-decoration: none;
+    padding: 15px 26px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-ghost {
+    background: rgba(250,249,246,0.06);
+    color: var(--alabaster);
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(250,249,246,0.24);
+  }
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line-inv);
+    max-width: 560px;
+  }
+  .metrics strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 27px;
+    color: var(--bronze-light);
+    font-weight: 400;
+  }
+  .metrics span { font-size: 12px; color: rgba(250,249,246,0.68); }
+
+  .side-box {
+    background: rgba(11, 13, 16, 0.78);
+    border: 1px solid rgba(215,180,119,0.34);
+    border-radius: 8px;
+    padding: 32px;
+  }
+  .side-box small.k {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--bronze-light);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .side-box h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; margin-bottom: 12px; }
+  .side-box p { font-size: 13.5px; color: rgba(250,249,246,0.75); margin-bottom: 20px; }
+  .pill-stack { display: flex; flex-direction: column; gap: 9px; }
+  .pill {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 14px;
+    background: rgba(250,249,246,0.05);
+    border: 1px solid rgba(250,249,246,0.1);
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .pill:hover { border-color: var(--bronze-light); }
+  .pill b { color: var(--bronze-light); }
+
+  section { padding: 84px 24px; }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+  .head { max-width: 680px; margin-bottom: 52px; }
+  .tag {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--bronze);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .head h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.6vw, 42px);
+    font-weight: 400;
+    line-height: 1.18;
+    margin-bottom: 14px;
+  }
+  .head p { color: var(--body); font-size: 16px; }
+
+  .stone-band {
+    background: var(--stone);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 54px; align-items: center; }
+  .vision-card {
+    background: var(--alabaster);
+    border-left: 3px solid var(--bronze);
+    padding: 30px 32px;
+    border-radius: 0 6px 6px 0;
+  }
+  .vision-card blockquote {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .vision-card cite {
+    font-style: normal;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card {
+    background: #FFF;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--bronze); }
+  .num { font-family: var(--serif); font-size: 13.5px; color: var(--bronze); margin-bottom: 14px; display: block; }
+  .card h3 { font-family: var(--serif); font-size: 21px; font-weight: 400; margin-bottom: 12px; }
+  .card p { font-size: 14px; color: var(--body); margin-bottom: 20px; line-height: 1.65; }
+  .card a { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink); text-decoration: none; }
+
+  /* Partners Section */
+  .partners-band {
+    background: var(--charcoal);
+    color: var(--alabaster);
+  }
+  .partner-card {
+    background: rgba(250,249,246,0.04);
+    border: 1px solid rgba(215,180,119,0.25);
+    border-radius: 8px;
+    padding: 32px 28px;
+  }
+  .p-init {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(215,180,119,0.14);
+    border: 1px solid var(--bronze-light);
+    color: var(--bronze-light);
+    font-family: var(--serif);
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .partner-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 400; margin-bottom: 4px; }
+  .p-role {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--bronze-light);
+    margin-bottom: 14px;
+    display: block;
+    font-weight: 600;
+  }
+  .partner-card p { font-size: 13.8px; color: rgba(250,249,246,0.78); line-height: 1.66; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 48px; }
+  .loc-box { background: var(--stone); border: 1px solid var(--line); border-radius: 8px; padding: 36px; }
+  .loc-item { margin-bottom: 22px; }
+  .loc-item small { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--bronze); font-weight: 700; margin-bottom: 5px; }
+  .loc-item p, .loc-item a { font-size: 15px; color: var(--ink); text-decoration: none; font-weight: 500; }
+  .form-box { background: #FFF; border: 1px solid var(--line); border-radius: 8px; padding: 38px; }
+  .fg { margin-bottom: 16px; }
+  .fg label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--body); margin-bottom: 6px; }
+  .inp { width: 100%; padding: 13px 14px; border: 1px solid rgba(17,21,28,0.18); border-radius: 4px; font-size: 14.5px; background: var(--alabaster); font-family: var(--sans); }
+  .inp:focus { outline: none; border-color: var(--bronze); background: #FFF; }
+
+  footer {
+    background: var(--charcoal);
+    color: rgba(250,249,246,0.65);
+    padding: 44px 24px;
+    font-size: 13px;
+    border-top: 1px solid var(--line-inv);
+  }
+  .f-in { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+
+  @media (max-width: 920px) {
+    .hero-grid, .split, .grid-3, .contact-grid { grid-template-columns: 1fr; }
+    .links { display: none; }
+    .hero { padding: 56px 20px; }
+    section { padding: 60px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-in">
+    <div>LEKKI PHASE 1 · LAGOS <span class="dot">•</span> 25B AWKUZU STREET, OFF OMORINRE JOHNSON STREET</div>
+    <div>CHAMBERS LINE: <a href="tel:+2348038440402">+234 803 844 0402</a> <span class="dot">•</span> NOTARIES PUBLIC</div>
+  </div>
+</div>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="logo">
+      <div class="badge">LP</div>
+      <div class="logo-txt">
+        <strong>Legend Practitioners</strong>
+        <small>Solicitors · Advocates · Notaries Public</small>
+      </div>
+    </a>
+    <ul class="links">
+      <li><a href="#firm">The Firm</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#leadership">Partners &amp; Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="cta-top">Engage Chambers →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Established 2010 · Lekki Phase 1, Lagos</span>
+      <h1>Re-engineering modern commercial &amp; <em>energy</em> law.</h1>
+      <p class="hero-p">
+        <strong>Legend Practitioners</strong> merges distinguished legal tradition with modern commercial precision — advising multinationals, indigenous energy operators, vessel owners, financial institutions, and private clients from Lekki Phase 1, Lagos.
+      </p>
+      <div class="btns">
+        <a href="https://wa.me/2348038440402?text=Good%20day%20Legend%20Practitioners%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." class="btn-bronze">Consult via WhatsApp ↗</a>
+        <a href="#leadership" class="btn-ghost">Meet the Partners</a>
+      </div>
+      <div class="metrics">
+        <div class="metrics-item">
+          <strong>2010</strong>
+          <span>Year Established</span>
+        </div>
+        <div class="metrics-item">
+          <strong>Notary</strong>
+          <span>Certified Notarial Desk</span>
+        </div>
+        <div class="metrics-item">
+          <strong>06</strong>
+          <span>Specialized Sectors</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-box">
+      <small class="k">Direct Chambers Intake</small>
+      <h3>Select a Practice Desk</h3>
+      <p>Route your corporate, energy, maritime, or notarial enquiry straight to a Partner in Lekki Phase 1.</p>
+      <div class="pill-stack">
+        <div class="pill" onclick="pickPractice('Oil, Gas & Upstream Transactions')"><span>01 · Oil, Gas &amp; Marginal Fields</span><b>→</b></div>
+        <div class="pill" onclick="pickPractice('Maritime, Vessels & Marine Assets')"><span>02 · Maritime &amp; Vessel Licensing</span><b>→</b></div>
+        <div class="pill" onclick="pickPractice('Corporate Restructuring & Foreign Investment')"><span>03 · Corporate &amp; Foreign Investment</span><b>→</b></div>
+        <div class="pill" onclick="pickPractice('Commercial Litigation & Insolvency')"><span>04 · Commercial Litigation &amp; ADR</span><b>→</b></div>
+        <div class="pill" onclick="pickPractice('Notary Public & Property Transactions')"><span>05 · Notary Public &amp; Real Estate</span><b>→</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="firm" class="stone-band">
+  <div class="wrap split">
+    <div>
+      <span class="tag">About Legend Practitioners</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(28px,3.4vw,40px);font-weight:400;line-height:1.2;margin-bottom:18px;">
+        A versatile commercial law institution of distinction.
+      </h2>
+      <p style="color:var(--body);margin-bottom:16px;">
+        <strong>Legend Practitioners</strong> was established with a clear mandate: to build a multi-disciplinary legal institution uniting the rigor of conservative legal tradition with the evolving dynamics of modern business, energy, and technology.
+      </p>
+      <p style="color:var(--body);">
+        Our Partners and Consultants bring specialized expertise in structuring sophisticated local and cross-border commercial transactions, upstream financing, vessel acquisitions, high-stakes commercial litigation, and statutory notarisation — upholding the highest standards of confidentiality and ethics.
+      </p>
+    </div>
+    <div class="vision-card">
+      <blockquote>
+        “To re-engineer modern practice by the application of specialized legal skills — facilitating and protecting the strategic commercial interests of every client.”
+      </blockquote>
+      <cite>Our Vision · Legend Practitioners, Lagos</cite>
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Core Practice Areas</span>
+      <h2>Transactional depth &amp; courtroom strength.</h2>
+      <p>Advisory, regulatory compliance, and dispute resolution tailored to Nigeria's key commercial sectors.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div>
+          <span class="num">01 / ENERGY &amp; NATURAL RESOURCES</span>
+          <h3>Oil, Gas &amp; Upstream Finance</h3>
+          <p>Concession acquisitions &amp; licensing, Marginal Field farm-in transactions, strategic industry alliances, upstream financing structures, and NUPRC/regulatory due diligence.</p>
+        </div>
+        <a href="#contact" onclick="pickPractice('Oil, Gas & Upstream Transactions')">Engage Energy Desk →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="num">02 / ADMIRALTY &amp; SHIPPING</span>
+          <h3>Maritime &amp; Marine Assets</h3>
+          <p>Acquisition, chartering, and NIMASA licensing of vessels and offshore marine assets, cabotage compliance, marine insurance claims, and admiralty representation.</p>
+        </div>
+        <a href="#contact" onclick="pickPractice('Maritime, Vessels & Marine Assets')">Engage Maritime Desk →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="num">03 / CORPORATE &amp; FDI</span>
+          <h3>Corporate &amp; Foreign Investment</h3>
+          <p>Business establishment &amp; foreign investment structuring, corporate restructuring, company insolvency, joint ventures, and complex commercial contract negotiations.</p>
+        </div>
+        <a href="#contact" onclick="pickPractice('Corporate Restructuring & Foreign Investment')">Consult Corporate Team →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="num">04 / DISPUTE RESOLUTION</span>
+          <h3>Commercial Litigation &amp; Arbitration</h3>
+          <p>Seasoned trial and appellate advocacy across civil, corporate, banking, insolvency, labour/employment, and commercial disputes before Superior Courts and arbitral panels.</p>
+        </div>
+        <a href="#contact" onclick="pickPractice('Commercial Litigation & Insolvency')">Discuss a Dispute →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="num">05 / REAL ESTATE &amp; IP</span>
+          <h3>Property &amp; Intellectual Property</h3>
+          <p>High-value Lagos commercial &amp; residential property acquisitions, title due diligence &amp; perfection, alongside trademark, patent, and intellectual property protection.</p>
+        </div>
+        <a href="#contact" onclick="pickPractice('Notary Public & Property Transactions')">Property / IP Enquiry →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="num">06 / NOTARIAL AUTHORITY</span>
+          <h3>Notaries Public</h3>
+          <p>Statutory notarisation, attestation, and authentication of commercial instruments, marine bills, powers of attorney, and cross-border corporate documentation.</p>
+        </div>
+        <a href="#contact" onclick="pickPractice('Notary Public & Property Transactions')">Schedule Notarisation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" class="partners-band">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag" style="color:var(--bronze-light);">Leadership &amp; Counsel</span>
+      <h2 style="color:var(--alabaster);">Partner-led judgment on every instruction.</h2>
+      <p style="color:rgba(250,249,246,0.74);">Decades of combined transactional, regulatory, and courtroom experience.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="partner-card">
+        <div class="p-init">GO</div>
+        <h3>Greg Omoike, Esq.</h3>
+        <span class="p-role">Partner · Notary Public</span>
+        <p>
+          Admitted to the Nigerian Bar (LL.B., University of Benin) and appointed Notary Public. Formerly Senior Associate &amp; Associate Partner at Kanyi Karibi-Whyte &amp; Hastrup. Advises multinational and indigenous clients on Marginal Field Farm-Ins, Concession Licensing, Upstream Financing, Vessel Acquisitions, and Foreign Investment Law.
+        </p>
+      </div>
+
+      <div class="partner-card">
+        <div class="p-init">KK</div>
+        <h3>Ken Konze, Esq.</h3>
+        <span class="p-role">Partner · LL.M. (Lagos)</span>
+        <p>
+          LL.B. (Hons, Benin); LL.M. (University of Lagos); admitted to the Nigerian Bar in 2005. Honed his advocacy at <em>Chief Afe Babalola (SAN) &amp; Co.</em> and <em>Kola Awodein (SAN) &amp; Co.</em> Leads high-stakes Commercial Litigation, Corporate Restructuring &amp; Insolvency, Property Transactions, IP, and Employment Law.
+        </p>
+      </div>
+
+      <div class="partner-card">
+        <div class="p-init">JA</div>
+        <h3>Jonathan Aluju</h3>
+        <span class="p-role">Consultant · LL.M. (Cantab)</span>
+        <p>
+          Master of Laws, University of Cambridge (<em>LL.M. Cantab</em>) and Pegasus Scholar of the Inner Temple, London. Graduated Best Overall Student at the Nigerian Law School with First Class Honours (Star Prize Winner), bringing exceptional analytical depth to complex commercial mandates.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="loc-box">
+      <span class="tag">Lagos Chambers</span>
+      <h2 style="font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:24px;">Lekki Phase 1 Office</h2>
+      <div class="loc-item">
+        <small>Chambers Address</small>
+        <p>Plot 25B, Awkuzu Street,<br>Off Omorinre Johnson Street,<br>Lekki Scheme 1, Lagos, Nigeria.</p>
+      </div>
+      <div class="loc-item">
+        <small>Direct Telephone &amp; WhatsApp</small>
+        <p><a href="tel:+2348038440402">+234 803 844 0402</a></p>
+      </div>
+      <div class="loc-item">
+        <small>Practice Hours</small>
+        <p>Monday – Friday: 8:30 AM – 6:00 PM</p>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <span class="tag">Confidential Instruction</span>
+      <h3 style="font-family:var(--serif);font-size:26px;font-weight:400;margin-bottom:20px;">Schedule a Partner Consultation</h3>
+      <form onsubmit="sendLegendWA(event)">
+        <div class="fg">
+          <label>Full Name / Organization</label>
+          <input id="lName" class="inp" required placeholder="e.g. Capt. Tunde Bello / Atlantic Marine Ltd">
+        </div>
+        <div class="fg">
+          <label>Telephone / WhatsApp</label>
+          <input id="lPhone" class="inp" required placeholder="e.g. +234 803 000 0000">
+        </div>
+        <div class="fg">
+          <label>Practice Area</label>
+          <select id="lArea" class="inp">
+            <option>Oil, Gas &amp; Upstream Transactions</option>
+            <option>Maritime, Vessels &amp; Marine Assets</option>
+            <option>Corporate Restructuring &amp; Foreign Investment</option>
+            <option>Commercial Litigation &amp; Insolvency</option>
+            <option>Notary Public &amp; Property Transactions</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Summary of Matter</label>
+          <textarea id="lMsg" rows="3" class="inp" required placeholder="Briefly state the nature of your enquiry..."></textarea>
+        </div>
+        <button type="submit" class="btn-bronze" style="width:100%;">Submit to Chambers WhatsApp ↗</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-in">
+    <div>© 2026 <strong>Legend Practitioners</strong> · Solicitors, Advocates &amp; Notaries Public.</div>
+    <div>25B Awkuzu Street, Lekki Phase 1, Lagos · +234 803 844 0402</div>
+  </div>
+</footer>
+
+<script>
+function pickPractice(label) {
+  const s = document.getElementById('lArea');
+  for (let i = 0; i < s.options.length; i++) {
+    if (s.options[i].text.includes(label.split(' ')[0])) { s.selectedIndex = i; break; }
+  }
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => document.getElementById('lName').focus(), 450);
+}
+function sendLegendWA(e) {
+  e.preventDefault();
+  const n = document.getElementById('lName').value.trim();
+  const p = document.getElementById('lPhone').value.trim();
+  const a = document.getElementById('lArea').value;
+  const m = document.getElementById('lMsg').value.trim();
+  const txt = `Good day *Legend Practitioners*,\n\nNew consultation enquiry via your Chambers Portal:\n• *Client:* ${n}\n• *Phone:* ${p}\n• *Practice Desk:* ${a}\n• *Summary:* ${m}`;
+  window.open(`https://wa.me/2348038440402?text=${encodeURIComponent(txt)}`, '_blank');
+}
+</script>
+</body>
+</html>
